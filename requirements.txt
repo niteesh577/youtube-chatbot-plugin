@@ -1,19 +1,30 @@
-# Backend dependencies
-fastapi>=0.104.0
-uvicorn>=0.23.2
-python-dotenv>=1.0.0
-pydantic>=2.4.2
-langchain>=0.0.335
+# Core dependencies
+fastapi>=0.68.0
+uvicorn>=0.15.0
+python-dotenv>=0.19.0
+
+# LangChain and related
+langchain>=0.1.0
+langchain-community>=0.0.10
+langchain-core>=0.1.0
 langchain-google-genai>=0.0.5
-google-generativeai>=0.3.1
-python-multipart>=0.0.6
+google-generativeai>=0.3.0
+
+# Vector store and embeddings
 faiss-cpu>=1.7.4
-ytpy>=0.1.0
-youtube-transcript-api>=0.6.1
-requests>=2.31.0
-beautifulsoup4>=4.12.2
-pyarxiv>=1.0.3.1
 sentence-transformers>=2.2.2
-redis>=5.0.1
-python-jose>=3.3.0
-cors>=1.0.1
+
+# YouTube integration
+youtube-transcript-api>=0.6.1
+beautifulsoup4>=4.12.0
+requests>=2.31.0
+
+# Research tools
+arxiv>=2.0.0
+
+# Utilities
+pydantic>=2.0.0
+typing-extensions>=4.7.0
+logging>=0.5.0
+asyncio>=3.4.3
+aiohttp>=3.8.0
