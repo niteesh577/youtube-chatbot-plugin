@@ -1,0 +1,19 @@
+# Backend dependencies
+fastapi>=0.104.0
+uvicorn>=0.23.2
+python-dotenv>=1.0.0
+pydantic>=2.4.2
+langchain>=0.0.335
+langchain-google-genai>=0.0.5
+google-generativeai>=0.3.1
+python-multipart>=0.0.6
+faiss-cpu>=1.7.4
+ytpy>=0.1.0
+youtube-transcript-api>=0.6.1
+requests>=2.31.0
+beautifulsoup4>=4.12.2
+pyarxiv>=1.0.3.1
+sentence-transformers>=2.2.2
+redis>=5.0.1
+python-jose>=3.3.0
+cors>=1.0.1
