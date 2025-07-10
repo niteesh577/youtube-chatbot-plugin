@@ -1,19 +1,25 @@
-📺 YouTube Chatbot Plugin Backend
+---
+
+# 📺 YouTube Chatbot Plugin Backend
 
 A backend service for answering questions about YouTube videos using transcripts, LLM workflows (LangChain & LangGraph), vector search (FAISS), and arXiv research search.
 
-✨ Features
-✅ Fetch YouTube video transcripts automatically
-✅ Summarize entire video content
-✅ Answer user questions about the video context
-✅ Semantic search over transcript (FAISS)
-✅ Academic research paper search from arXiv
-✅ Asynchronous FastAPI server
+---
 
-🗂️ Project Structure
-graphql
-Copy
-Edit
+## ✨ Features
+
+* ✅ Fetch YouTube video transcripts automatically
+* ✅ Summarize entire video content
+* ✅ Answer user questions about the video context
+* ✅ Semantic search over transcript (FAISS)
+* ✅ Academic research paper search from arXiv
+* ✅ Asynchronous FastAPI server
+
+---
+
+## 🗂️ Project Structure
+
+```
 youtube-chatbot-plugin/
 │
 ├── main.py                   # FastAPI entrypoint
@@ -28,131 +34,144 @@ youtube-chatbot-plugin/
 │   └── logger.py
 ├── requirements.txt
 └── .env.example
-⚙️ Installation
-1️⃣ Clone the repository
+```
 
-bash
-Copy
-Edit
+---
+
+## ⚙️ Installation
+
+### 1️⃣ Clone the repository
+
+```bash
 git clone https://github.com/niteesh577/youtube-chatbot-plugin.git
 cd youtube-chatbot-plugin
-2️⃣ Create and activate virtual environment
+```
 
-bash
-Copy
-Edit
+### 2️⃣ Create and activate virtual environment
+
+```bash
 python -m venv venv
 source venv/bin/activate       # On Windows: venv\Scripts\activate
-3️⃣ Install dependencies
+```
 
-bash
-Copy
-Edit
+### 3️⃣ Install dependencies
+
+```bash
 pip install -r requirements.txt
-4️⃣ Configure environment variables
+```
 
-bash
-Copy
-Edit
+### 4️⃣ Configure environment variables
+
+```bash
 cp .env.example .env
-Edit .env with your API keys.
+```
 
-🏃‍♂️ Running the Server
+Edit `.env` with your API keys.
+
+---
+
+## 🏃‍♂️ Running the Server
+
 Start the FastAPI server with:
 
-bash
-Copy
-Edit
+```bash
 uvicorn main:app --reload
+```
+
 API will be available at:
 
-cpp
-Copy
-Edit
+```
 http://127.0.0.1:8000
-📌 Example Endpoints
-✅ POST /chat
-→ Ask a question about a YouTube video, with video ID & timestamp.
+```
 
-✅ POST /summarize
-→ Get a full summary of a video transcript.
+---
 
-✅ GET /search-research
-→ Search academic papers via arXiv.
+## 📌 Example Endpoints
 
-💡 Environment Variables
-Example .env:
+* ✅ **POST** `/chat`
+  → Ask a question about a YouTube video, with video ID & timestamp.
 
-ini
-Copy
-Edit
+* ✅ **POST** `/summarize`
+  → Get a full summary of a video transcript.
+
+* ✅ **GET** `/search-research`
+  → Search academic papers via arXiv.
+
+---
+
+## 💡 Environment Variables
+
+Example `.env`:
+
+```ini
 OPENAI_API_KEY=your_openai_api_key
 GOOGLE_API_KEY=your_google_api_key
 LANGSMITH_API_KEY=your_langsmith_key
 REDIS_URL=redis://localhost:6379
-📚 Requirements
-All dependencies are in requirements.txt.
+```
 
-Key packages:
+---
 
-fastapi
+## 📚 Requirements
 
-uvicorn
+All dependencies are in [`requirements.txt`](./requirements.txt).
 
-langchain
+**Key packages:**
 
-langgraph
+* `fastapi`
+* `uvicorn`
+* `langchain`
+* `langgraph`
+* `faiss-cpu`
+* `sentence-transformers`
+* `youtube-transcript-api`
+* `arxiv`
+* `python-dotenv`
 
-faiss-cpu
+---
 
-sentence-transformers
+## 🛠️ Development Tips
 
-youtube-transcript-api
+* ✅ **Auto-reload server:**
 
-arxiv
+  ```bash
+  uvicorn main:app --reload
+  ```
 
-python-dotenv
+* ✅ **Code formatting:**
 
-🛠️ Development Tips
-✅ Auto-reload server
+  ```bash
+  black .
+  ```
 
-bash
-Copy
-Edit
-uvicorn main:app --reload
-✅ Code formatting
+* ✅ **Type checking:**
 
-bash
-Copy
-Edit
-black .
-✅ Type checking
+  ```bash
+  mypy .
+  ```
 
-bash
-Copy
-Edit
-mypy .
-🧑‍💻 Contributing
+---
+
+## 🧑‍💻 Contributing
+
 Pull requests are welcome!
 Please open an issue first to discuss what you would like to change.
 
-📜 License
-This project is licensed under the MIT License.
-See LICENSE.
+---
 
-🙏 Acknowledgements
-FastAPI
+## 🙏 Acknowledgements
 
-LangChain
+* [FastAPI](https://fastapi.tiangolo.com/)
+* [LangChain](https://www.langchain.com/)
+* [LangGraph](https://www.langgraph.dev/)
+* [SentenceTransformers](https://www.sbert.net/)
+* [FAISS](https://github.com/facebookresearch/faiss)
+* [arXiv API](https://arxiv.org/help/api)
 
-LangGraph
+---
 
-SentenceTransformers
+## 🌟 Star the Repository!
 
-FAISS
-
-arXiv API
-
-🌟 Star the Repository!
 If you find this project helpful, please ⭐️ the repo to support development!
 
+---
